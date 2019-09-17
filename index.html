@@ -5,6 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>AutoGator</title>
+
+		<!-- Stylesheets / Bootstrap -->
 		<link
 			rel="stylesheet"
 			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -12,9 +14,12 @@
 			crossorigin="anonymous"
 		/>
 		<link rel="stylesheet" href="./css/style.min.css" />
+
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900&display=swap" rel="stylesheet" />
 	</head>
 	<body>
-		<nav class="navbar fixed-top  navbar-expand-lg navbar-dark bg-dark">
+		<nav class="navbar sticky-top  navbar-expand-lg navbar-dark bg-dark">
 			<div class="container justify-content-between">
 				<a class="navbar-brand" href="#">
 					<img id="brand-img" src="./img/logo.png" alt="Auto Gator Logo" />
@@ -31,23 +36,41 @@
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
-				<div class="sbar-container collapse navbar-collapse justify-content-between align-items-center align-self-stretch my-0" id="navbarSupportedContent">
-					<div class="shrink-container d-flex flex-column justify-content-center align-items-center align-self-stretch pt-2">
-                        <div class="input-group  nav-searchbar ">
-                            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
-                            <div class="input-group-append shrink">
-                                <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Used Parts </button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Vehicle sales</a>
-                                    <a class="dropdown-item" href="#">Auto Parts</a>
-                                </div>
-                                <button type="button" class="btn btn-success">Search</button>
-                            </div>
-                        </div>
-                       
+				<div
+					class="sbar-container collapse navbar-collapse justify-content-between align-items-center align-self-stretch my-0"
+					id="navbarSupportedContent"
+				>
+					<div
+						class="shrink-container d-flex flex-column justify-content-center align-items-center align-self-stretch pt-2"
+					>
+						<div class="input-group  nav-searchbar ">
+							<input
+								type="text"
+								class="form-control"
+								aria-label="Text input with segmented dropdown button"
+								placeholder="Type your search here"
+							/>
+							<div class="input-group-append shrink">
+								<button
+									type="button"
+									class="btn btn-light dropdown-toggle dropdown-toggle-split"
+									data-toggle="dropdown"
+									aria-haspopup="true"
+									aria-expanded="false"
+								>
+									Used Parts
+								</button>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="#">Vehicle sales</a>
+									<a class="dropdown-item" href="#">Auto Parts</a>
+								</div>
+								<button type="button" class="btn btn-success">Search</button>
+							</div>
+						</div>
+
 						<ul class="navbar-nav">
 							<li class="nav-item">
-								<a class="nav-link" href="#">Home</span></a>
+								<a class="nav-link" href="#">Home</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="#">About Us</a>
@@ -64,16 +87,19 @@
 							<li class="nav-item">
 								<a class="nav-link" href="#">Log In</a>
 							</li>
-							
 						</ul>
 					</div>
 					<div class="cart" id="cart">
 						<ul class="navbar-nav ">
-							<li class="nav-item">
-								<a class="nav-link" href="#"
-                                    >CART $
-                                    <span id="cartAmmount"></span> 
-                                    <i class="fas fa-shopping-cart"></i>
+							<li class="nav-item d-inline-flex">
+								<a class="nav-link" href="#">
+									CART $
+									<span id="cartAmmount"></span>
+								</a>
+								<a class="nav-link" href="#">
+									<i class="fas fa-shopping-cart"></i>
+								</a>
+								<a class="nav-link" href="#">
 									<i class="fas fa-bell"></i>
 								</a>
 							</li>
@@ -81,10 +107,49 @@
 					</div>
 				</div>
 			</div>
-        </nav>
-        <header class="container hero-bg">
+		</nav>
+		<header class="hero-bg">
+			<div class="main-container background">
+				<div class="card-deck">
+					<div
+						class="card d-flex flex-column justify-content-end"
+						style="background-image: url(./img/car_sales.jpg);background-size: cover;"
+					>
+						<div class="card-body text-center d-flex flex-column flex-grow-0">
+							<h2 class="card-title">Vehicle Sales</h2>
 
-        </header>
+							<a href="#" class="btn btn-primary btn-lg btn-pill "
+								>See More <i class="fas fa-plus"></i
+							></a>
+						</div>
+					</div>
+					<div
+						class="card d-flex flex-column justify-content-end"
+						style="background-image: url(./img/auto_parts.jpg);background-size: cover;"
+					>
+						<div class="card-body text-center d-flex flex-column flex-grow-0">
+							<h2 class="card-title">Auto Parts</h2>
+
+							<a href="#" class="btn btn-primary btn-lg btn-pill "
+								>See More <i class="fas fa-plus"></i
+							></a>
+						</div>
+					</div>
+					<div
+						class="card d-flex flex-column justify-content-end"
+						style="background-image: url(./img/we_buy_cars.jpg);background-size: cover;"
+					>
+						<div class="card-body text-center d-flex flex-column flex-grow-0">
+							<h2 class="card-title">We Can Buy Your Car</h2>
+
+							<a href="#" class="btn btn-primary btn-lg btn-pill "
+								>See More <i class="fas fa-plus"></i
+							></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
 		<div class="container main-article">
 			<p>
 				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit dolorum velit illum blanditiis itaque, a,
