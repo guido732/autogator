@@ -12,7 +12,7 @@ $(window).scroll(function() {
 			document.querySelector(".shrink-container").classList.remove("pt-2");
 			document.querySelector(".shrink-container").classList.add("pt-0");
 		}, delayMs);
-		document.querySelector(".navbar-brand").style = "height : 50px;";
+		document.querySelector(".navbar-brand").style = "height : 40px;";
 	} else {
 		$("nav").removeClass("shrink");
 		document.querySelector(".navbar-brand").style = "height : 85px;";
