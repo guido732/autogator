@@ -27,14 +27,6 @@ if ($(window).width() > 992) {
 		}
 	});
 } else {
-	$(window).scroll(function() {
-		if ($(document).scrollTop() > 0) {
-			$("nav").addClass("shrink");
-
-			document.querySelector(".navbar-brand").style = "height : 40px;";
-		} else {
-			$("nav").removeClass("shrink");
-			document.querySelector(".navbar-brand").style = "height : 85px;";
-		}
-	});
+	$("nav").addClass("shrink");
+	document.querySelector(".navbar-brand").style = "height : 40px;";
 }
