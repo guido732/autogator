@@ -6,6 +6,8 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>AutoGator</title>
 
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900&display=swap" rel="stylesheet" />
 		<!-- Stylesheets / Bootstrap -->
 		<link
 			rel="stylesheet"
@@ -14,13 +16,10 @@
 			crossorigin="anonymous"
 		/>
 		<link rel="stylesheet" href="./css/style.min.css" />
-
-		<!-- Google Fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900&display=swap" rel="stylesheet" />
 	</head>
 	<body>
-		<nav class="navbar fixed-top  navbar-expand-lg navbar-dark bg-dark">
-			<div class="container justify-content-between">
+		<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+			<div class="container">
 				<a class="navbar-brand" href="#">
 					<img id="brand-img" src="./img/logo.png" alt="Auto Gator Logo" />
 				</a>
@@ -35,15 +34,9 @@
 				>
 					<span class="navbar-toggler-icon"></span>
 				</button>
-
-				<div
-					class="sbar-container collapse navbar-collapse justify-content-between align-items-center align-self-stretch my-0"
-					id="navbarSupportedContent"
-				>
-					<div
-						class="shrink-container d-flex flex-column justify-content-center align-items-center align-self-stretch pt-2"
-					>
-						<div class="input-group  nav-searchbar ">
+				<div class="sbar-container navcontent collapse navbar-collapse" id="navbarSupportedContent">
+					<div class="shrink-container">
+						<div class="input-group nav-searchbar">
 							<input
 								type="text"
 								class="form-control"
@@ -52,23 +45,17 @@
 								placeholder="Type your search here"
 							/>
 							<div class="input-group-append shrink">
-								<button
-									type="button"
-									class="btn btn-light dropdown-toggle dropdown-toggle-split"
-									data-toggle="dropdown"
-									aria-haspopup="true"
-									aria-expanded="false"
+								<select
+									id="search-select"
+									class="btn btn-light btn-form dropdown-toggle dropdown-toggle-split"
+									required
 								>
-									Used Parts
-								</button>
-								<div class="dropdown-menu">
-									<a class="dropdown-item" href="#">Vehicle sales</a>
-									<a class="dropdown-item" href="#">Auto Parts</a>
-								</div>
-								<button type="button" class="btn btn-primary">Search</button>
+									<option selected>Vehicle Sales</option>
+									<option>Auto Parts</option>
+								</select>
+								<button type="button" class="btn btn-primary btn-form">Search</button>
 							</div>
 						</div>
-
 						<ul class="navbar-nav">
 							<li class="nav-item">
 								<a class="nav-link" href="#">Home</a>
@@ -91,8 +78,8 @@
 						</ul>
 					</div>
 					<div class="cart" id="cart">
-						<ul class="navbar-nav ">
-							<li class="nav-item d-inline-flex">
+						<ul class="navbar-nav">
+							<li class="nav-item">
 								<a class="nav-link" href="#">
 									CART $
 									<span id="cartAmmount"></span>
@@ -136,16 +123,17 @@
 			</div>
 		</nav>
 		<header class="hero-bg">
-			<div class="main-container background header-cards ">
+			<div class="main-container header-cards">
 				<div class="card-deck">
 					<div
-						class="card d-flex flex-column justify-content-end hover-scale box-shadow"
+						class="card hover-scale box-shadow"
 						style="background-image: url(./img/car_sales.jpg);background-size: cover;"
 					>
-						<div class="card-body text-center d-flex flex-column flex-grow-0">
+						<div class="card-body">
 							<h2 class="card-title">Vehicle Sales</h2>
-							<a href="#" class="btn btn-primary btn-lg btn-pill "
-								>See More <object data="" type="SVG" class="embedded-svg">
+							<a href="#" class="btn btn-primary btn-short"
+								>See More
+								<object data="" type="SVG" class="embedded-svg">
 									<svg
 										aria-hidden="true"
 										focusable="true"
@@ -163,58 +151,61 @@
 						</div>
 					</div>
 					<div
-						class="card d-flex flex-column justify-content-end hover-scale box-shadow"
+						class="card hover-scale box-shadow"
 						style="background-image: url(./img/auto_parts.jpg);background-size: cover;"
 					>
-						<div class="card-body text-center d-flex flex-column flex-grow-0">
+						<div class="card-body">
 							<h2 class="card-title">Auto Parts</h2>
-							<a href="#" class="btn btn-primary btn-lg btn-pill "
-								>See More <object data="" type="SVG" class="embedded-svg">
-										<svg
-											aria-hidden="true"
-											focusable="true"
-											role="img"
-											xmlns="http://www.w3.org/2000/svg"
-											viewBox="0 0 448 512"
-										>
-											<path
-												fill="currentColor"
-												d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
-											></path>
-										</svg>
-									</object></a>
+							<a href="#" class="btn btn-primary btn-short"
+								>See More
+								<object data="" type="SVG" class="embedded-svg">
+									<svg
+										aria-hidden="true"
+										focusable="true"
+										role="img"
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 448 512"
+									>
+										<path
+											fill="currentColor"
+											d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
+										></path>
+									</svg> </object
+							></a>
 						</div>
 					</div>
 					<div
-						class="card d-flex flex-column justify-content-end hover-scale box-shadow"
+						class="card hover-scale box-shadow"
 						style="background-image: url(./img/we_buy_cars.jpg);background-size: cover;"
 					>
-						<div class="card-body text-center d-flex flex-column flex-grow-0">
+						<div class="card-body">
 							<h2 class="card-title">We Buy Your Car</h2>
-							<a href="#" class="btn btn-primary btn-lg btn-pill "
-								>See More <object data="" type="SVG" class="embedded-svg">
-										<svg
-											aria-hidden="true"
-											focusable="true"
-											role="img"
-											xmlns="http://www.w3.org/2000/svg"
-											viewBox="0 0 448 512"
-										>
-											<path
-												fill="currentColor"
-												d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
-											></path>
-										</svg>
-									</object></a>
+							<a href="#" class="btn btn-primary btn-short"
+								>See More
+								<object data="" type="SVG" class="embedded-svg">
+									<svg
+										aria-hidden="true"
+										focusable="true"
+										role="img"
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 448 512"
+									>
+										<path
+											fill="currentColor"
+											d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
+										></path>
+									</svg>
+								</object>
+							</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</header>
 		<section class="main-article why-us">
-			<article class="container ">
-				<div class="floating-bar d-flex box-shadow">
-					<div class="text-container ">
+			<article class="container">
+				<div class="floating-bar box-shadow">
+					<div class="text-container">
 						<h2>Why Buy <span class="color-primary">from us</span>?</h2>
 						<p>
 							At Autogator we have many reasons why our customers shop with us and keep returning. We are
@@ -227,15 +218,12 @@
 						<img src="./img/man_tablet.jpg" class="floating-img box-shadow" alt="Man using tablet" />
 					</div>
 				</div>
-				<div class="card-deck reasons-deck">
-					<div
-						class="card d-flex flex-column justify-content-end hover-scale box-shadow pointer hover-primary"
-					>
-						<div class="card-body text-center d-flex flex-column flex-grow-0">
+				<div class="card-deck icon-deck">
+					<div class="card hover-scale box-shadow pointer hover-primary">
+						<div class="card-body ">
 							<div class="svg-container box-shadow">
 								<object data="" type="SVG">
 									<?xml version="1.0" encoding="iso-8859-1"?>
-
 									<svg
 										version="1.1"
 										id="Capa_1"
@@ -309,7 +297,7 @@
 									</svg>
 								</object>
 							</div>
-							<h2 class="card-title ">Used Auto Parts and Cars for Sale</h2>
+							<h2 class="card-title">Used Auto Parts and Cars for Sale</h2>
 							<p>
 								AutoGator is a fully licensed car dealer and auto dismantling facility located in
 								Northern California. We have thousands of used auto parts and parts cars in stock for
@@ -319,14 +307,11 @@
 							</p>
 						</div>
 					</div>
-					<div
-						class="card d-flex flex-column justify-content-end hover-scale box-shadow pointer hover-primary"
-					>
-						<div class="card-body text-center d-flex flex-column flex-grow-0">
+					<div class="card hover-scale box-shadow pointer hover-primary">
+						<div class="card-body ">
 							<div class="svg-container box-shadow">
 								<object data="" type="SVG">
 									<?xml version="1.0" encoding="iso-8859-1"?>
-
 									<svg
 										version="1.1"
 										id="Layer_1"
@@ -400,7 +385,7 @@
 									</svg>
 								</object>
 							</div>
-							<h2 class="card-title ">Shop in our store 24/7</h2>
+							<h2 class="card-title">Shop in our store 24/7</h2>
 							<p>
 								Check out Autogator's online shopping cart with thousands of quality used parts for
 								sale. Part details have helpful photos, complete descriptions, warranty information and
@@ -410,10 +395,8 @@
 							</p>
 						</div>
 					</div>
-					<div
-						class="card d-flex flex-column justify-content-end hover-scale box-shadow pointer hover-primary"
-					>
-						<div class="card-body text-center d-flex flex-column flex-grow-0">
+					<div class="card hover-scale box-shadow pointer hover-primary">
+						<div class="card-body ">
 							<div class="svg-container box-shadow">
 								<object data="" type="SVG">
 									<svg viewBox="0 0 496 496" xmlns="http://www.w3.org/2000/svg">
@@ -444,7 +427,7 @@
 									</svg>
 								</object>
 							</div>
-							<h2 class="card-title ">Used Auto Parts are our Specialty</h2>
+							<h2 class="card-title">Used Auto Parts are our Specialty</h2>
 							<p>
 								Auto Parts are easy to find at AutoGator. As the Northern California experts of used
 								auto parts for over 30 years, we know a thing or two about salvage auto parts. We have a
@@ -454,14 +437,11 @@
 							</p>
 						</div>
 					</div>
-					<div
-						class="card d-flex flex-column justify-content-end hover-scale box-shadow pointer hover-primary"
-					>
-						<div class="card-body text-center d-flex flex-column flex-grow-0">
+					<div class="card hover-scale box-shadow pointer hover-primary">
+						<div class="card-body ">
 							<div class="svg-container box-shadow">
 								<object data="" type="SVG">
 									<?xml version="1.0" encoding="iso-8859-1"?>
-
 									<svg
 										version="1.1"
 										id="Capa_1"
@@ -531,7 +511,7 @@
 									</svg>
 								</object>
 							</div>
-							<h2 class="card-title ">Recycling Helps our Enviroment</h2>
+							<h2 class="card-title">Recycling Helps our Enviroment</h2>
 							<p>
 								Auto Dismanters are the original recyclers. By dealing with a licensed auto dismantler,
 								you are helping our environment. Purchasing recycled auto parts, salvaged cars, or by
@@ -541,14 +521,11 @@
 							</p>
 						</div>
 					</div>
-					<div
-						class="card d-flex flex-column justify-content-end hover-scale box-shadow pointer hover-primary"
-					>
-						<div class="card-body text-center d-flex flex-column flex-grow-0">
+					<div class="card hover-scale box-shadow pointer hover-primary">
+						<div class="card-body ">
 							<div class="svg-container box-shadow">
 								<object data="" type="SVG">
 									<?xml version="1.0" encoding="iso-8859-1"?>
-
 									<svg
 										version="1.1"
 										id="Capa_1"
@@ -642,7 +619,7 @@
 									</svg>
 								</object>
 							</div>
-							<h2 class="card-title ">Serving California since 1981</h2>
+							<h2 class="card-title">Serving California since 1981</h2>
 							<p>
 								AutoGator has been serving the Northern California area since 1981. We are a fully
 								licensed auto dismantling facility and car dealership that's registered with Federal and
@@ -652,14 +629,11 @@
 							</p>
 						</div>
 					</div>
-					<div
-						class="card d-flex flex-column justify-content-end hover-scale box-shadow pointer hover-primary"
-					>
-						<div class="card-body text-center d-flex flex-column flex-grow-0">
+					<div class="card hover-scale box-shadow pointer hover-primary">
+						<div class="card-body ">
 							<div class="svg-container box-shadow">
 								<object data="" type="SVG">
 									<?xml version="1.0" encoding="iso-8859-1"?>
-
 									<svg
 										version="1.1"
 										id="Capa_1"
@@ -717,7 +691,7 @@
 									</svg>
 								</object>
 							</div>
-							<h2 class="card-title ">We have parts for the following makes:</h2>
+							<h2 class="card-title">We have parts for the following makes:</h2>
 							<p>
 								Acura, Audi, BMW, Buick, Cadillac, Chevrolet, Chrysler, Dodge, Ford, Geo, GMC, Honda,
 								Hummer, Hyundai, Infiniti, Isuzu, Jaguar, Jeep, Kia, Land Rover, Lexus, Lincoln, Mazda,
@@ -729,11 +703,11 @@
 				</div>
 			</article>
 		</section>
-		<section class="user-reviews ">
-			<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="5000">
+		<section class="user-reviews">
+			<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="50000">
 				<div class="carousel-inner container">
 					<div class="carousel-item active">
-						<div class="flex-wrapper d-flex">
+						<div class="flex-wrapper">
 							<img src="./img/review1.jpg" alt="Jane Daw" />
 							<div class="text-container">
 								<h3><span class="color-primary">Jane Daw,</span> Roseville CA</h3>
@@ -746,8 +720,8 @@
 							</div>
 						</div>
 					</div>
-					<div class="carousel-item ">
-						<div class="flex-wrapper d-flex">
+					<div class="carousel-item">
+						<div class="flex-wrapper">
 							<img src="./img/review2.jpg" alt="John Doe" />
 							<div class="text-container">
 								<h3><span class="color-primary">John Doe,</span> Roseville CA</h3>
@@ -760,8 +734,8 @@
 							</div>
 						</div>
 					</div>
-					<div class="carousel-item ">
-						<div class="flex-wrapper d-flex">
+					<div class="carousel-item">
+						<div class="flex-wrapper">
 							<img src="./img/review3.jpg" alt="Dohn Joe" />
 							<div class="text-container">
 								<h3><span class="color-primary">Dohn Joe,</span> Roseville CA</h3>
@@ -772,7 +746,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="control-container container d-flex justify-space-between">
+				<div class="control-container container">
 					<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
 						<span class="carousel-control-prev-icon" aria-hidden="true">
 							<img src="./img/icons/prev.svg" alt="Previous Review Button" />
@@ -789,12 +763,12 @@
 			</div>
 		</section>
 		<section class="tracking darkbg text-light">
-			<div class="container d-flex">
+			<div class="container">
 				<div class="text-container">
 					<h2>Order Tracking</h2>
 					<p>Insert your phone number to check the state of your order</p>
 				</div>
-				<div class="input-group  nav-searchbar ">
+				<div class="input-group nav-searchbar">
 					<input
 						type="number"
 						class="form-control"
@@ -808,7 +782,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="location d-flex">
+		<section class="location">
 			<div class="mapouter">
 				<div class="gmap_canvas">
 					<iframe
@@ -843,7 +817,7 @@
 		</section>
 		<section class="newsletter">
 			<div class="hero-bg">
-				<div class="main-container background text-center text-light">
+				<div class="main-container background text-light">
 					<h2>Get Notified of New Arrivals!</h2>
 					<p>Subscribe to our newsletters below and get an email when we receive new parts or cars.</p>
 					<form>
@@ -867,24 +841,24 @@
 		</section>
 		<footer>
 			<div class="footer-wrapper darkbg text-light">
-				<div class=" container footer-item-container d-flex ">
-					<div class="footer-item ">
+				<div class=" container footer-item-container">
+					<div class="footer-item">
 						<h3>AUTOGATOR INC.</h3>
 						<p>1961 PFE Rd.</p>
 						<p>Roseville, CA 95747</p>
 					</div>
-					<div class="footer-item ">
+					<div class="footer-item">
 						<h3>WORKING HOURS</h3>
 						<p>Vehicle Sales</p>
 						<p>Mon - Fri, 8-17hs</p>
 						<p>Parts Sales</p>
 						<p>Mon - Fri, 8-17:30hs</p>
 					</div>
-					<div class="footer-item ">
+					<div class="footer-item">
 						<h3>CONTACT US</h3>
 						<p>1-800-833-9292</p>
 					</div>
-					<div class="footer-item ">
+					<div class="footer-item">
 						<h3>SOCIAL MEDIA</h3>
 						<a href="#">
 							<object data="" type="SVG" class="embedded-svg">
