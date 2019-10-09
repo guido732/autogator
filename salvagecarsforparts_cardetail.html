@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>AutoGator - Part Detail</title>
+		<title>AutoGator - Salvage Car For Parts Detail</title>
 
 		<!-- Favicon -->
 		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="./img/favicon/apple-touch-icon-57x57.png" />
@@ -141,9 +141,16 @@
 			</div>
 		</nav>
 		<section class="details-container">
-			<article class="container card-section details box-shadow">
-				<h2 id="partName">2013 Audi Q5 AC Compressor</h2>
-				<h3>Part Pictures</h3>
+			<article class="details card-section container box-shadow">
+				<div class="title-container">
+					<div class="title-left">
+						<h2 class="carName">2006 Hummer H3</h2>
+						<h2 class="color-primary">For Parts Only</h2>
+					</div>
+
+					<h4>Stock #: <span id="stockNumber">R19353</span></h4>
+				</div>
+				<h3>Vehicle Pictures</h3>
 				<div class="lightbox-gallery-container">
 					<a
 						href="https://unsplash.it/1200/768.jpg?image=251"
@@ -216,42 +223,124 @@
 						<img src="https://unsplash.it/600.jpg?image=260" class="img-fluid" />
 					</a>
 				</div>
-				<h3>Part Specifications</h3>
+				<h3>Vehicle Specifications</h3>
 				<div class="spec-container">
 					<div class="row">
 						<div class="col-sm">
+							<h4>Year, Make & Model</h4>
+							<p id="yearMakeModel">2011 BMW 328i</p>
 							<h4>Stock Number</h4>
-							<p>R19766</p>
+							<p id="specStockNumber">R19353</p>
+							<h4>Vin #:</h4>
+							<p id="vinNumber">WBAKE3C55BE558707</p>
 						</div>
 						<div class="col-sm">
-							<h4>Description</h4>
-							<p>$25.00 core charge</p>
+							<h4>Engine size / Cylinders:</h4>
+							<p id="engineSizeCylinders">3.00 Liters / 6 Cylinders</p>
+							<h4>Transmission</h4>
+							<p id="transmission">Automatic</p>
+							<h4>Odometer Reads:</h4>
+							<p id="odometer">103,993</p>
 						</div>
 						<div class="col-sm">
-							<h4>Shipping</h4>
-							<p>$25.00</p>
+							<h4>Fuel Type</h4>
+							<p id="fuelType">Gas</p>
+							<h4>Drivetrain</h4>
+							<p id="drivetrain">RWD</p>
+							<h4>Ext. Color / Int. Color:</h4>
+							<p id="carColor">
+								Maroon (Color code A82) / <br />
+								Black (Color code LCSW)
+							</p>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-sm">
-							<h4>Will Fit:</h4>
-							<p>2.0 (turbo): w/o hybrid</p>
-						</div>
-						<div class="col-sm">
-							<h4>Price:</h4>
-							<p>$75.00 (taxes & shipping may apply)</p>
-						</div>
-						<div class="col-sm"></div>
-					</div>
-				</div>
-
-				<div class="btn-parent">
-					<a href="#" class="btn btn-primary btn-lg">Add to Cart</a>
 				</div>
 			</article>
-			<article class="warning-section card-section container box-shadow">
+		</section>
+		<section class="part-search-result">
+			<article class="search-result-container card-section box-shadow container salvage-car-parts">
+				<div class="result-head">
+					<div class="result-head-img-container">
+						<h4>Photo</h4>
+					</div>
+					<div class="result-head-specs-container">
+						<h4>Part Type</h4>
+						<h4>Fits</h4>
+						<h4>Stock #</h4>
+						<h4>Description</h4>
+						<h4>Price</h4>
+						<h4></h4>
+					</div>
+				</div>
+				<div class="result-item">
+					<div class="result-item-img-container">
+						<img src="./img/parts_search/compressor.jpg" alt="Compressor" />
+					</div>
+					<div class="result-item-specs-container">
+						<h4>AC Compressor</h4>
+						<p><span class="responsive-hidden">Fits: </span>2.0L, turbo</p>
+						<p><span class="responsive-hidden">Stock #: </span> R19766</p>
+						<p><span class="responsive-hidden">Description: </span>$25.00 core charge BII9F4C</p>
+						<p><span class="responsive-hidden">Price: </span>$75.00</p>
+						<a href="#" class="btn btn-primary">More Info</a>
+					</div>
+				</div>
+				<div class="result-item">
+					<div class="result-item-img-container">
+						<!-- <img src="./img/parts_search/compressor.jpg" alt="Compressor" /> -->
+					</div>
+					<div class="result-item-specs-container">
+						<h4>AC Compressor</h4>
+						<p><span class="responsive-hidden">Fits: </span>2.0L, turbo</p>
+						<p><span class="responsive-hidden">Stock #: </span> R19766</p>
+						<p><span class="responsive-hidden">Description: </span>$25.00 core charge BII9F4C</p>
+						<p><span class="responsive-hidden">Price: </span>$75.00</p>
+						<a href="#" class="btn btn-primary">More Info</a>
+					</div>
+				</div>
+				<div class="result-item">
+					<div class="result-item-img-container">
+						<img src="./img/parts_search/compressor.jpg" alt="Compressor" />
+					</div>
+					<div class="result-item-specs-container">
+						<h4>AC Compressor</h4>
+						<p><span class="responsive-hidden">Fits: </span>2.0L, turbo</p>
+						<p><span class="responsive-hidden">Stock #: </span> R19766</p>
+						<p><span class="responsive-hidden">Description: </span>$25.00 core charge BII9F4C</p>
+						<p><span class="responsive-hidden">Price: </span>$75.00</p>
+						<a href="#" class="btn btn-primary disabled">SOLD</a>
+					</div>
+				</div>
+			</article>
+			<article class="search-result-nostock card-section box-shadow text-center container d-none">
+				<h2>
+					Sorry! <br />
+					We are currently <span class="color-primary">out of stock</span> for this part
+				</h2>
+				<a href="#" class="btn btn-primary">New Search</a>
+			</article>
+		</section>
+		<section class="warning-container">
+			<article class="warning-section card-section container-sm box-shadow ">
 				<h2 class="text-center">Important Information</h2>
+				<h4>90 Day Warranty</h4>
+				<p>
+					AutoGator's standard warranty on <span class="carName">2011 BMW 328i</span> auto parts is 90 days
+					from date of original purchase. Extended warranties are available on used auto parts for an
+					additional expense. Ask your sales person for more details.
+				</p>
+				<h4>Payment Information</h4>
+				<p>
+					We accept cash, debit, cashier's checks, & money orders for our vehicles. Non-refundable deposits
+					can be arranged to hold a for 7 - 10 days maximum. Financing for these vehicles is not available.
+				</p>
 
+				<h4>Shipping Information</h4>
+				<p>
+					AutoGator can ship your used <span class="carName">2011 BMW 328i</span> auto parts anywhere in the
+					world. We properly package and insure all items to ensure a safe delivery. All shipping charges are
+					non-refundable and please ask your sales person for more details and shipping options.
+				</p>
 				<h4>Prop 65 Warning:</h4>
 				<p>
 					Operating, servicing and maintaining a passenger vehicle or off-road vehicle can expose you to
@@ -262,6 +351,14 @@
 					For more information go to
 					<a href="www.P65Warnings.ca.gov/passenger-vehicle">this site</a>.
 				</p>
+			</article>
+			<article class="card-section container-sm text-center box-shadow bg-dark text-light">
+				<h2>Want to <span class="color-primary">Sell your Unwanted Vehicle</span>?</h2>
+				<p>
+					Sell your unwanted car or truck to AutoGator and get cash for it today! It's the easy way to sell
+					your vehicle... get a free offer right now.
+				</p>
+				<a href="#" class="btn btn-primary btn-lg">Free Online Quote</a>
 			</article>
 		</section>
 		<section class="tracking bg-gray text-light">

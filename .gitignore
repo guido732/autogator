@@ -8,3 +8,5 @@ css/style.css
 # compress imgs
 # ids para forms y campos a completar
 # fix h3 styling for part details / salvagecarsforsale_cardetails
+# salvage parts cars -> should we make the search bar for multiple 
+#   car makes or only one? - check salvagecarforsale subscription
