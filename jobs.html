@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>AutoGator - We Buy Cars</title>
+
+		<!-- Favicon -->
+		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="./img/favicon/apple-touch-icon-57x57.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="./img/favicon/apple-touch-icon-114x114.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="./img/favicon/apple-touch-icon-72x72.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="./img/favicon/apple-touch-icon-144x144.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="60x60" href="./img/favicon/apple-touch-icon-60x60.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="./img/favicon/apple-touch-icon-120x120.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="76x76" href="./img/favicon/apple-touch-icon-76x76.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="./img/favicon/apple-touch-icon-152x152.png" />
+		<link rel="icon" type="image/png" href="./img/favicon/favicon-196x196.png" sizes="196x196" />
+		<link rel="icon" type="image/png" href="./img/favicon/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/png" href="./img/favicon/favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="./img/favicon/favicon-16x16.png" sizes="16x16" />
+		<link rel="icon" type="image/png" href="./img/favicon/favicon-128.png" sizes="128x128" />
+		<meta name="application-name" content="Autogator" />
+		<meta name="msapplication-TileColor" content="#FFFFFF" />
+		<meta name="msapplication-TileImage" content="./img/favicon/mstile-144x144.png" />
+		<meta name="msapplication-square70x70logo" content="./img/favicon/mstile-70x70.png" />
+		<meta name="msapplication-square150x150logo" content="./img/favicon/mstile-150x150.png" />
+		<meta name="msapplication-wide310x150logo" content="./img/favicon/mstile-310x150.png" />
+		<meta name="msapplication-square310x310logo" content="./img/favicon/mstile-310x310.png" />
+
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900&display=swap" rel="stylesheet" />
+		<!-- Stylesheets / Bootstrap -->
+		<link rel="stylesheet" href="./css/bootstrap.min.css" />
+		<link rel="stylesheet" href="./js/lightbox/ekko-lightbox.css" />
+		<link rel="stylesheet" href="./css/style.min.css" />
+	</head>
+	<body>
+		<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+			<div class="container ">
+				<a class="navbar-brand" href="/">
+					<img id="brand-img" src="./img/logo.png" alt="Auto Gator Logo" />
+				</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="sbar-container navcontent collapse navbar-collapse" id="navbarSupportedContent">
+					<div class="shrink-container">
+						<div class="input-group nav-searchbar">
+							<input
+								type="text"
+								class="form-control"
+								id="navbar-searchbar"
+								aria-label="Text input with segmented dropdown button"
+								placeholder="Type your search here"
+							/>
+							<div class="input-group-append shrink">
+								<select
+									id="search-select"
+									class="btn btn-light btn-form dropdown-toggle dropdown-toggle-split"
+									required
+								>
+									<option selected>Vehicle Sales</option>
+									<option>Auto Parts</option>
+								</select>
+								<button type="button" class="btn btn-primary btn-form">Search</button>
+							</div>
+						</div>
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="/">Home</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="./about.html">About Us</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="./contact.html">Contact</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">My Account</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Register</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Log In</a>
+							</li>
+						</ul>
+					</div>
+					<div class="cart" id="cart">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									CART $
+									<span id="cartAmmount"></span>
+								</a>
+								<a class="nav-link" href="#">
+									<object data="" class="embedded-svg" type="SVG">
+										<svg
+											aria-hidden="true"
+											focusable="true"
+											role="img"
+											xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 576 512"
+										>
+											<path
+												fill="currentColor"
+												d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"
+											></path>
+										</svg>
+									</object>
+								</a>
+								<a class="nav-link" href="#">
+									<object data="" type="SVG" class="embedded-svg">
+										<svg
+											aria-hidden="true"
+											focusable="true"
+											role="img"
+											xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 448 512"
+										>
+											<path
+												fill="currentColor"
+												d="M224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64zm215.39-149.71c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71z"
+											></path>
+										</svg>
+									</object>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<section class="details-container pb-4">
+			<article class="card-section container box-shadow text-center">
+				<h2>Current Job Opportunities with Autogator</h2>
+				<a href="https://www.autogator.com/job_application_page.php" class="">
+					<img src="./img/job_banner.jpg" alt="Job Banner" class="m-auto" />
+				</a>
+			</article>
+			<article class="card-section container box-shadow">
+				<div class="text-center mb-5">
+					<h2 class="color-primary">Parts Puller</h2>
+					<p class="px-md-5 mx-md-5">
+						We are looking to fill an immediate position for a Parts Pullers. These individuals' main
+						responsibility will be removing/pulling used auto parts off vehicles.
+					</p>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 col-md-6">
+						<h3>
+							Main Responsibilities Include:
+						</h3>
+						<ul>
+							<li>Removing / Stocking Auto Parts</li>
+							<li>Escorting Customers to Inspect Items</li>
+							<li>Shipping / handling of inventory</li>
+							<li>Some Data Entry</li>
+							<li>Other Related Tasks</li>
+						</ul>
+						<h3>
+							Skills Required:
+						</h3>
+						<ul>
+							<li>Previous automotive experience</li>
+							<li>Minor computer skills</li>
+							<li>Great time management</li>
+							<li>Customer service experience</li>
+							<li>Great communication (verbal & written)</li>
+							<li>Always courteous and professional</li>
+						</ul>
+					</div>
+					<div class="col-sm-12 col-md-6">
+						<h3>Desired Requirements:</h3>
+						<ul>
+							<li>Auto dismantling experience</li>
+							<li>Previous automotive sales / service experience</li>
+							<li>Inventory management systems experience</li>
+							<li>Shipping / freight experience</li>
+							<li>Ebay / Craigslist</li>
+							<li>Bi-lingual (Russian/Eastern European, Spanish)</li>
+						</ul>
+						<h3>Must Haves:</h3>
+						<ul>
+							<li>Own significant tools</li>
+							<li>Professionalism</li>
+							<li>Be reliable & consistent</li>
+							<li>Strong work ethic</li>
+							<li>Be a team player</li>
+							<li>Drug free!</li>
+						</ul>
+					</div>
+				</div>
+				<h3>About the Job:</h3>
+				<p>
+					Our company is seeking to fill these part time / full time (40 hrs.) positions immediately, which
+					can offer paid holidays and vacation time. We are willing to train those who are willing to work
+					hard, have a great attitude, and demonstrate a willingness to learn. Compensation is dependent upon
+					experience and advancement opportunities are also available. This posting is for a 100% legal
+					position from a lawful, licensed, and insured facility. We are an equal opportunity employer.
+				</p>
+				<h3>How To Apply:</h3>
+				<p>
+					Email us at <a href="mailto:jobs@autogator.com">jobs@autogator.com</a> and please
+					<span class="strong color-primary">ATTACH</span> your resume to the email.
+					<span class="strong color-primary"
+						>Include the word "Parts Puller" in your initial e-mail reply for verification purposes</span
+					>. Personal and employment references required on your resume.
+				</p>
+				<h3>What to Expect:</h3>
+				<p>
+					If we are interested in you, we will contact you via email initially. A pre-interview will be via
+					telephone only and final candidates will be interviewed in person at our facility. All potential
+					employees must pass a mandatory background check and pre-employment drug testing is required.
+				</p>
+			</article>
+			<article class="card-section container box-shadow">
+				<div class="text-center mb-5">
+					<h2 class="color-primary">Vehicle Prep / Detailer</h2>
+					<p class="px-md-5 mx-md-5">
+						This individual's prime responsibility will be preparing vehicles to be sold, including washing,
+						cleaning and related tasks, along with some general labor duties.
+					</p>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 col-md-6">
+						<h3>
+							Main Responsibilities Include:
+						</h3>
+						<ul>
+							<li>Washing / cleaning vehicles</li>
+							<li>Organizing vehicles in yard</li>
+							<li>Customer service</li>
+							<li>General janitorial duties</li>
+						</ul>
+						<h3>
+							Skills Required:
+						</h3>
+						<ul>
+							<li>Safety conscious</li>
+							<li>Time management skills</li>
+							<li>Great communication (verbal & written)</li>
+						</ul>
+					</div>
+					<div class="col-sm-12 col-md-6">
+						<h3>Desired Requirements:</h3>
+						<ul>
+							<li>Customer service experience</li>
+							<li>Bi-lingual (Russian/Eastern European, Spanish)</li>
+						</ul>
+						<h3>Must Haves:</h3>
+						<ul>
+							<li>Professionalism</li>
+							<li>Be reliable & consistent</li>
+							<li>Strong work ethic</li>
+							<li>Be a team player</li>
+							<li>Drug free</li>
+						</ul>
+					</div>
+				</div>
+				<h3>About the Job:</h3>
+				<p>
+					This job opening is for the repairable vehicle side of our business and will primarily involve all
+					things related to preparing vehicles to be sold on our car lot. Our company is seeking to fill this
+					full time (40 hrs.) position immediately, which offers paid holidays and vacation time. We are
+					willing to train those who are willing to work hard, have a great attitude, and demonstrate a
+					willingness to learn. Compensation is dependent upon experience and advancement opportunities are
+					also available. This posting is for a 100% legal position from a lawful, licensed, and insured
+					facility. We are an equal opportunity employer.
+				</p>
+				<h3>How To Apply:</h3>
+				<p>
+					<a href="https://www.autogator.com/job_application_page.php">Click Here</a> to submit an online
+					application or you can email us at <a href="mailto:jobs@autogator.com">jobs@autogator.com</a> and
+					please <span class="strong color-primary">ATTACH</span> your resume to the email.
+					<span class="strong color-primary"
+						>Include the word "Vehicle Prep" in your initial e-mail reply for verification purposes</span
+					>. Personal and employment references required on your resume.
+				</p>
+				<h3>What to Expect:</h3>
+				<p>
+					If we are interested in you, we will contact you via email initially. A pre-interview will be via
+					telephone only and final candidates will be interviewed in person at our facility. All potential
+					employees must pass a mandatory background check and pre-employment drug testing is required.
+				</p>
+			</article>
+		</section>
+		<section class="tracking bg-gray text-light">
+			<div class="container">
+				<div class="text-container">
+					<h2>Order Tracking</h2>
+					<p>Insert your phone number to check the state of your order</p>
+				</div>
+				<div class="input-group nav-searchbar">
+					<input
+						type="number"
+						class="form-control"
+						id="tracking-searchbar"
+						aria-label="Text input with search button"
+						placeholder="Insert Tracking Nº (Phone Nº you provided)"
+						required
+					/>
+					<div class="input-group-append shrink">
+						<button type="button" class="btn btn-primary" aria-label="Search Button">Search</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="footer-wrapper bg-dark text-light">
+				<div class=" container footer-item-container">
+					<div class="footer-item">
+						<h3>AUTOGATOR INC.</h3>
+						<p>1961 PFE Rd.</p>
+						<p>Roseville, CA 95747</p>
+					</div>
+					<div class="footer-item">
+						<h3>WORKING HOURS</h3>
+						<p>Vehicle Sales</p>
+						<p>Mon - Fri, 8-17hs</p>
+						<p>Parts Sales</p>
+						<p>Mon - Fri, 8-17:30hs</p>
+					</div>
+					<div class="footer-item">
+						<h3>CONTACT US</h3>
+						<p>1-800-833-9292</p>
+					</div>
+					<div class="footer-item">
+						<h3>SOCIAL MEDIA</h3>
+						<a href="#">
+							<object data="" type="SVG" class="embedded-svg">
+								<svg
+									aria-hidden="true"
+									focusable="true"
+									role="img"
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 448 512"
+								>
+									<path
+										fill="currentColor"
+										d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+									></path>
+								</svg>
+							</object>
+						</a>
+						<a href="#">
+							<object data="" type="SVG" class="embedded-svg">
+								<svg
+									aria-hidden="true"
+									focusable="true"
+									role="img"
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 320 512"
+								>
+									<path
+										fill="currentColor"
+										d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+									></path>
+								</svg>
+							</object>
+						</a>
+					</div>
+				</div>
+				<div class="footer-copyright">
+					<p>Copyright Autogator - 2019</p>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Bootstrap Jquery -->
+		<script src="./js/jquery-3.3.1.slim.min.js"></script>
+
+		<!-- Bootstrap Popper -->
+		<script src="./js/popper.min.js"></script>
+
+		<!-- Bootstrap Js -->
+		<script src="./js/bootstrap.min.js"></script>
+
+		<!-- NavBar Shrink custom Js -->
+		<script src="./js/navbar-shrink.js"></script>
+	</body>
+</html>
