@@ -36,110 +36,117 @@
 		<link rel="stylesheet" href="./css/style.min.css" />
 	</head>
 	<body>
-		<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-			<div class="container ">
-				<a class="navbar-brand" href="/">
-					<img id="brand-img" src="./img/logo.png" alt="Auto Gator Logo" />
-				</a>
-				<button
-					class="navbar-toggler"
-					type="button"
-					data-toggle="collapse"
-					data-target="#navbarSupportedContent"
-					aria-controls="navbarSupportedContent"
-					aria-expanded="false"
-					aria-label="Toggle navigation"
-				>
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="sbar-container navcontent collapse navbar-collapse" id="navbarSupportedContent">
-					<div class="shrink-container">
-						<div class="input-group nav-searchbar">
-							<input
-								type="text"
-								class="form-control"
-								id="navbar-searchbar"
-								aria-label="Text input with segmented dropdown button"
-								placeholder="Type your search here"
-							/>
-							<div class="input-group-append shrink">
-								<select
-									id="search-select"
-									class="btn btn-light btn-form dropdown-toggle dropdown-toggle-split"
-									required
-								>
-									<option selected>Vehicle Sales</option>
-									<option>Auto Parts</option>
-								</select>
-								<button type="button" class="btn btn-primary btn-form">Search</button>
+			<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+					<div class="container ">
+						<a class="navbar-brand" href="/">
+							<img id="brand-img" src="./img/logo.png" alt="Auto Gator Logo" />
+						</a>
+						<button
+							class="navbar-toggler"
+							type="button"
+							data-toggle="collapse"
+							data-target="#navbarSupportedContent"
+							aria-controls="navbarSupportedContent"
+							aria-expanded="false"
+							aria-label="Toggle navigation"
+						>
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="sbar-container navcontent collapse navbar-collapse" id="navbarSupportedContent">
+							<div class="shrink-container">
+								<div class="input-group nav-searchbar">
+									<input
+										type="text"
+										class="form-control"
+										id="navbar-searchbar"
+										aria-label="Text input with segmented dropdown button"
+										placeholder="Type your search here"
+									/>
+									<div class="input-group-append shrink">
+										<select
+											id="search-select"
+											class="btn btn-light btn-form dropdown-toggle dropdown-toggle-split"
+											required
+										>
+											<option selected>Vehicle Sales</option>
+											<option>Auto Parts</option>
+										</select>
+										<button type="button" class="btn btn-primary btn-form">Search</button>
+									</div>
+								</div>
+								<ul class="navbar-nav">
+									<li class="nav-item">
+										<a class="nav-link" href="/">Home</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="./about.html">About Us</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="./contact.html">Contact</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="./privacy.html">Privacy</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="./jobs.html">Jobs</a>
+									</li>
+		
+									<!-- 							<li class="nav-item">
+										<a class="nav-link" href="#">My Account</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">Register</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">Log In</a>
+									</li> -->
+								</ul>
 							</div>
+							<!-- 					<div class="cart" id="cart">
+								<ul class="navbar-nav">
+									<li class="nav-item">
+										<a class="nav-link" href="#">
+											CART $
+											<span id="cartAmmount"></span>
+										</a>
+										<a class="nav-link" href="#">
+											<object data="" class="embedded-svg" type="SVG">
+												<svg
+													aria-hidden="true"
+													focusable="true"
+													role="img"
+													xmlns="http://www.w3.org/2000/svg"
+													viewBox="0 0 576 512"
+												>
+													<path
+														fill="currentColor"
+														d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"
+													></path>
+												</svg>
+											</object>
+										</a>
+										<a class="nav-link" href="#">
+											<object data="" type="SVG" class="embedded-svg">
+												<svg
+													aria-hidden="true"
+													focusable="true"
+													role="img"
+													xmlns="http://www.w3.org/2000/svg"
+													viewBox="0 0 448 512"
+												>
+													<path
+														fill="currentColor"
+														d="M224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64zm215.39-149.71c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71z"
+													></path>
+												</svg>
+											</object>
+										</a>
+									</li>
+								</ul>
+							</div> -->
 						</div>
-						<ul class="navbar-nav">
-							<li class="nav-item">
-								<a class="nav-link" href="/">Home</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="./about.html">About Us</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="./contact.html">Contact</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">My Account</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Register</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Log In</a>
-							</li>
-						</ul>
 					</div>
-					<div class="cart" id="cart">
-						<ul class="navbar-nav">
-							<li class="nav-item">
-								<a class="nav-link" href="#">
-									CART $
-									<span id="cartAmmount"></span>
-								</a>
-								<a class="nav-link" href="#">
-									<object data="" class="embedded-svg" type="SVG">
-										<svg
-											aria-hidden="true"
-											focusable="true"
-											role="img"
-											xmlns="http://www.w3.org/2000/svg"
-											viewBox="0 0 576 512"
-										>
-											<path
-												fill="currentColor"
-												d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"
-											></path>
-										</svg>
-									</object>
-								</a>
-								<a class="nav-link" href="#">
-									<object data="" type="SVG" class="embedded-svg">
-										<svg
-											aria-hidden="true"
-											focusable="true"
-											role="img"
-											xmlns="http://www.w3.org/2000/svg"
-											viewBox="0 0 448 512"
-										>
-											<path
-												fill="currentColor"
-												d="M224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64zm215.39-149.71c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71z"
-											></path>
-										</svg>
-									</object>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</nav>
+				</nav>
 		<section class="details-container pb-4">
 			<article class="card-section container box-shadow">
 				<h2 class="text-center">What is a CA Salvage or Branded Title?</h2>
@@ -206,65 +213,80 @@
 			</div>
 		</section>
 		<footer>
-			<div class="footer-wrapper bg-dark text-light">
-				<div class=" container footer-item-container">
-					<div class="footer-item">
-						<h3>AUTOGATOR INC.</h3>
-						<p>1961 PFE Rd.</p>
-						<p>Roseville, CA 95747</p>
+				<div class="footer-wrapper bg-dark text-light">
+					<div class=" container footer-item-container">
+						<div class="footer-item">
+							<h3>AUTOGATOR INC.</h3>
+							<p>1961 PFE Rd.</p>
+							<p>Roseville, CA 95747</p>
+							<p>1-800-833-9292</p>
+						</div>
+						<div class="footer-item">
+							<h3>WORKING HOURS</h3>
+							<p>Vehicle Sales</p>
+							<p>Mon - Fri, 8-17hs</p>
+							<p>Parts Sales</p>
+							<p>Mon - Fri, 8-17:30hs</p>
+						</div>
+						<div class="footer-item">
+							<h3>COMPANY</h3>
+							<a href="./contact.html">
+								<p>Contact</p>
+							</a>
+							<a href="./about.html">
+								<p>About Us</p>
+							</a>
+							<a href="./jobs.html">
+								<p>Carreers</p>
+							</a>
+							<a href="./partswarranty.html">
+								<p>Parts Warranty</p>
+							</a>
+							<a href="./privacy.html">
+								<p>Privacy</p>
+							</a>
+						</div>
+						<div class="footer-item">
+							<h3>SOCIAL MEDIA</h3>
+							<a href="https://www.instagram.com/autogator.inc">
+								<object data="" type="SVG" class="embedded-svg">
+									<svg
+										aria-hidden="true"
+										focusable="true"
+										role="img"
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 448 512"
+									>
+										<path
+											fill="currentColor"
+											d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+										></path>
+									</svg>
+								</object>
+							</a>
+							<a href="http://www.facebook.com/autogator">
+								<object data="" type="SVG" class="embedded-svg">
+									<svg
+										aria-hidden="true"
+										focusable="true"
+										role="img"
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 320 512"
+									>
+										<path
+											fill="currentColor"
+											d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+										></path>
+									</svg>
+								</object>
+							</a>
+						</div>
 					</div>
-					<div class="footer-item">
-						<h3>WORKING HOURS</h3>
-						<p>Vehicle Sales</p>
-						<p>Mon - Fri, 8-17hs</p>
-						<p>Parts Sales</p>
-						<p>Mon - Fri, 8-17:30hs</p>
-					</div>
-					<div class="footer-item">
-						<h3>CONTACT US</h3>
-						<p>1-800-833-9292</p>
-					</div>
-					<div class="footer-item">
-						<h3>SOCIAL MEDIA</h3>
-						<a href="#">
-							<object data="" type="SVG" class="embedded-svg">
-								<svg
-									aria-hidden="true"
-									focusable="true"
-									role="img"
-									xmlns="http://www.w3.org/2000/svg"
-									viewBox="0 0 448 512"
-								>
-									<path
-										fill="currentColor"
-										d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-									></path>
-								</svg>
-							</object>
-						</a>
-						<a href="#">
-							<object data="" type="SVG" class="embedded-svg">
-								<svg
-									aria-hidden="true"
-									focusable="true"
-									role="img"
-									xmlns="http://www.w3.org/2000/svg"
-									viewBox="0 0 320 512"
-								>
-									<path
-										fill="currentColor"
-										d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
-									></path>
-								</svg>
-							</object>
-						</a>
+					<div class="footer-copyright">
+						<p>Autogator Inc - Copyright 2019</p>
 					</div>
 				</div>
-				<div class="footer-copyright">
-					<p>Copyright Autogator - 2019</p>
-				</div>
-			</div>
-		</footer>
+			</footer>
 
 		<!-- Bootstrap Jquery -->
 		<script src="./js/jquery-3.3.1.slim.min.js"></script>
